@@ -1,5 +1,14 @@
 ﻿param ($PublishedApp)
 
+#########################################################################
+#                        Add shared_assemblies                          #
+#########################################################################
+ 
+# Mahapps Library
+[System.Reflection.Assembly]::LoadFrom('assembly\MahApps.Metro.dll')       | out-null
+[System.Reflection.Assembly]::LoadFrom('assembly\System.Windows.Interactivity.dll') | out-null
+ 
+
 $keys = Get-ChildItem -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall|Get-ItemProperty
 
 foreach ($key in $keys)
