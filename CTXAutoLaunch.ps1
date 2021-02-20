@@ -26,6 +26,8 @@ if ($PublishedApp -eq $null)
   exit 0
 }
 
+# To Do: check for Citrix Receiver/Workspace installed
+
 # Initialize variables
 $StartApp = $false
 $currentDir = [System.AppDomain]::CurrentDomain.BaseDirectory.TrimEnd('\')
